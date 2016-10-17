@@ -15,13 +15,22 @@ class FoodsController < ApplicationController
   def edit
   end
 
+  def create
+    @food = Food.new(food_params)
+    if @food.save
+       redirect_to @food
+    else
+      render 'new'
+    end
+  end
+
   def update
     find_food_id
     @food.update(food_params)
     if @food.save
        redirect_to @food
     else
-      render 'new'
+      render 'edit'
     end
   end
 
