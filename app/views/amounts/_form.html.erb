@@ -1,0 +1,5 @@
+<%=form_for([@food, @food.amounts.build]) do |f| %>
+  <%= f.label :food_intake %>
+  <%= f.text_field :food_intake %>
+  <%=f.submit%>
+  <%end%>
