@@ -3,6 +3,9 @@
 <%= food.food_groups%>
 <%= food.created_at.strftime("%B,%d")%>
 
+
+
+<p> <%=render "amounts/amounts"%></p>
 <p><%=render "amounts/form"%></p>
 
 <%= link_to "Edit", edit_food_path%>
